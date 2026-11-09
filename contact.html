@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orbitly – Contact</title>
+
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="./icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
+
+<!-- NAVBAR with logo -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-rocket-takeoff-fill text-info"></i> Orbitly
+        </a>
+
+        <!-- Hamburger button (shows on phones) -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="solar-system.html"><i class="bi bi-globe-europe-africa"></i> Solar System</a></li>
+                <li class="nav-item"><a class="nav-link" href="missions.html"><i class="bi bi-table"></i> Missions</a></li>
+                <li class="nav-item"><a class="nav-link" href="observing.html"><i class="bi bi-binoculars"></i> Observing</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images"></i> Gallery</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<nav class="container mt-3" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html" class="text-info"><i class="bi bi-house"></i> Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+    </ol>
+</nav>
+
+<main class="container my-4 flex-grow-1">
+    <h1 class="mb-3">Contact and stargazing questionnaire</h1>
+    <p class="lead">Tell me a bit about yourself and what you'd like to see in the night sky.</p>
+
+    <form action="#" method="get" class="p-4 border border-secondary rounded mb-5">
+        <div class="row g-3">
+
+            <!-- 1 + 2: text inputs, side by side on medium screens and up -->
+            <div class="col-md-6">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstName" name="first_name" required>
+            </div>
+            <div class="col-md-6">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastName" name="last_name" required>
+            </div>
+
+            <!-- 3: e-mail with input group -->
+            <div class="col-md-6">
+                <label for="email" class="form-label">E-mail</label>
+                <div class="input-group">
+                    <span class="input-group-text">@</span>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+            </div>
+
+            <!-- 4: phone with icon in input group -->
+            <div class="col-md-6">
+                <label for="phone" class="form-label">Phone</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="+420 123 456 789">
+                </div>
+            </div>
+
+            <!-- 5: select -->
+            <div class="col-md-6">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" id="country" name="country">
+                    <option value="" selected>Choose...</option>
+                    <option value="cz">Czech Republic</option>
+                    <option value="sk">Slovakia</option>
+                    <option value="pl">Poland</option>
+                    <option value="de">Germany</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- 6: another select -->
+            <div class="col-md-6">
+                <label for="topic" class="form-label">Favourite topic</label>
+                <select class="form-select" id="topic" name="topic">
+                    <option value="" selected>Choose...</option>
+                    <option value="planets">Planets</option>
+                    <option value="stars">Stars and galaxies</option>
+                    <option value="missions">Space missions</option>
+                    <option value="rockets">Rockets</option>
+                </select>
+            </div>
+
+            <!-- 7: radio buttons -->
+            <div class="col-md-6">
+                <fieldset>
+                    <legend class="form-label fs-6">Your experience with astronomy</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="experience" id="expBeginner" value="beginner" checked>
+                        <label class="form-check-label" for="expBeginner">Beginner</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="experience" id="expInter" value="intermediate">
+                        <label class="form-check-label" for="expInter">Intermediate</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="experience" id="expAdv" value="advanced">
+                        <label class="form-check-label" for="expAdv">Advanced</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- 8: checkboxes -->
+            <div class="col-md-6">
+                <fieldset>
+                    <legend class="form-label fs-6">What would you like to observe?</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="intMoon" value="moon">
+                        <label class="form-check-label" for="intMoon">The Moon</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="intPlanets" value="planets">
+                        <label class="form-check-label" for="intPlanets">Planets</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="intMeteors" value="meteors">
+                        <label class="form-check-label" for="intMeteors">Meteor showers</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interests[]" id="intMilky" value="milkyway">
+                        <label class="form-check-label" for="intMilky">The Milky Way</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- 9: range slider -->
+            <div class="col-md-6">
+                <label for="sky" class="form-label">How dark is the sky where you live? (1 = darkest, 9 = city centre)</label>
+                <input type="range" class="form-range" id="sky" name="sky" min="1" max="9" value="5">
+            </div>
+
+            <!-- 10: date -->
+            <div class="col-md-6">
+                <label for="obsDate" class="form-label">Preferred date for an observing night</label>
+                <input type="date" class="form-control" id="obsDate" name="obs_date">
+            </div>
+
+            <!-- 11: number with input group -->
+            <div class="col-md-6">
+                <label for="distance" class="form-label">Distance to a dark-sky place</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" id="distance" name="distance" min="0" placeholder="e.g. 20">
+                    <span class="input-group-text">km</span>
+                </div>
+            </div>
+
+            <!-- 12: switch (a styled checkbox) -->
+            <div class="col-md-6 d-flex align-items-end">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="telescope" name="telescope">
+                    <label class="form-check-label" for="telescope">I own a telescope</label>
+                </div>
+            </div>
+
+            <!-- 13: subject -->
+            <div class="col-12">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject">
+            </div>
+
+            <!-- 14: textarea -->
+            <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <!-- 15: newsletter checkbox -->
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter" value="yes">
+                    <label class="form-check-label" for="newsletter">Send me news about space and observing events</label>
+                </div>
+            </div>
+
+            <!-- SAVE BUTTON -->
+            <div class="col-12">
+                <button type="submit" class="btn btn-success btn-lg"><i class="bi bi-save"></i> Save</button>
+            </div>
+
+        </div>
+    </form>
+</main>
+
+<footer class="bg-black border-top border-secondary mt-5 py-3">
+    <div class="container text-center">
+        <p class="mb-1 fw-bold"><i class="bi bi-rocket-takeoff-fill text-info"></i> Orbitly</p>
+        <p class="small text-secondary mb-0">&copy; 2026 Orbitly</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS bundle (needed for navbar toggle, carousel, modal, tabs) -->
+<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

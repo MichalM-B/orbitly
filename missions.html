@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orbitly – Missions</title>
+
+  <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="./icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="./css/dataTables.bootstrap5.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+
+  <!-- jQuery first, then DataTables, then the Bootstrap 5 styling for DataTables -->
+  <script src="./js/jquery-3.7.1.js"></script>
+  <script src="./js/dataTables.js"></script>
+  <script src="./js/dataTables.bootstrap5.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#missionsTable').DataTable({
+        pageLength: 10
+      });
+    });
+  </script>
+</head>
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-rocket-takeoff-fill text-info"></i> Orbitly
+      </a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainMenu"
+              aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="solar-system.html"><i class="bi bi-globe-europe-africa"></i> Solar System</a></li>
+          <li class="nav-item"><a class="nav-link active" href="missions.html"><i class="bi bi-table"></i> Missions</a></li>
+          <li class="nav-item"><a class="nav-link" href="observing.html"><i class="bi bi-binoculars"></i> Observing</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images"></i> Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="container mt-3" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html" class="text-info"><i class="bi bi-house"></i> Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Missions</li>
+    </ol>
+  </nav>
+
+  <main class="container my-4 flex-grow-1">
+    <h1 class="mb-3">Space Missions</h1>
+    <p class="lead">
+      A selection of 70 missions from Sputnik to today. Search, sort by any column,
+      or flip through the pages.
+    </p>
+
+    <div class="table-responsive">
+      <table id="missionsTable" class="table table-dark table-striped" style="width:100%">
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Agency</th>
+            <th>Launch year</th>
+            <th>Destination</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Sputnik 1</td><td>USSR</td><td>1957</td><td>Earth orbit</td><td>Satellite</td></tr>
+          <tr><td>Explorer 1</td><td>USA (NASA)</td><td>1958</td><td>Earth orbit</td><td>Satellite</td></tr>
+          <tr><td>Luna 2</td><td>USSR</td><td>1959</td><td>Moon</td><td>Impactor</td></tr>
+          <tr><td>Vostok 1</td><td>USSR</td><td>1961</td><td>Earth orbit</td><td>Crewed</td></tr>
+          <tr><td>Mariner 2</td><td>USA (NASA)</td><td>1962</td><td>Venus</td><td>Flyby</td></tr>
+          <tr><td>Friendship 7</td><td>USA (NASA)</td><td>1962</td><td>Earth orbit</td><td>Crewed</td></tr>
+          <tr><td>Vostok 6</td><td>USSR</td><td>1963</td><td>Earth orbit</td><td>Crewed</td></tr>
+          <tr><td>Ranger 7</td><td>USA (NASA)</td><td>1964</td><td>Moon</td><td>Impactor</td></tr>
+          <tr><td>Mariner 4</td><td>USA (NASA)</td><td>1964</td><td>Mars</td><td>Flyby</td></tr>
+          <tr><td>Voskhod 2</td><td>USSR</td><td>1965</td><td>Earth orbit</td><td>Crewed</td></tr>
+          <tr><td>Luna 9</td><td>USSR</td><td>1966</td><td>Moon</td><td>Lander</td></tr>
+          <tr><td>Surveyor 1</td><td>USA (NASA)</td><td>1966</td><td>Moon</td><td>Lander</td></tr>
+          <tr><td>Apollo 8</td><td>USA (NASA)</td><td>1968</td><td>Moon</td><td>Crewed</td></tr>
+          <tr><td>Apollo 11</td><td>USA (NASA)</td><td>1969</td><td>Moon</td><td>Crewed</td></tr>
+          <tr><td>Apollo 13</td><td>USA (NASA)</td><td>1970</td><td>Moon</td><td>Crewed</td></tr>
+          <tr><td>Luna 16</td><td>USSR</td><td>1970</td><td>Moon</td><td>Sample return</td></tr>
+          <tr><td>Venera 7</td><td>USSR</td><td>1970</td><td>Venus</td><td>Lander</td></tr>
+          <tr><td>Lunokhod 1 (Luna 17)</td><td>USSR</td><td>1970</td><td>Moon</td><td>Rover</td></tr>
+          <tr><td>Mariner 9</td><td>USA (NASA)</td><td>1971</td><td>Mars</td><td>Orbiter</td></tr>
+          <tr><td>Salyut 1</td><td>USSR</td><td>1971</td><td>Earth orbit</td><td>Space station</td></tr>
+          <tr><td>Pioneer 10</td><td>USA (NASA)</td><td>1972</td><td>Jupiter</td><td>Flyby</td></tr>
+          <tr><td>Apollo 17</td><td>USA (NASA)</td><td>1972</td><td>Moon</td><td>Crewed</td></tr>
+          <tr><td>Skylab</td><td>USA (NASA)</td><td>1973</td><td>Earth orbit</td><td>Space station</td></tr>
+          <tr><td>Mariner 10</td><td>USA (NASA)</td><td>1973</td><td>Mercury</td><td>Flyby</td></tr>
+          <tr><td>Apollo–Soyuz</td><td>USA / USSR</td><td>1975</td><td>Earth orbit</td><td>Crewed</td></tr>
+          <tr><td>Viking 1</td><td>USA (NASA)</td><td>1975</td><td>Mars</td><td>Orbiter and lander</td></tr>
+          <tr><td>Voyager 2</td><td>USA (NASA)</td><td>1977</td><td>Outer planets</td><td>Flyby</td></tr>
+          <tr><td>Voyager 1</td><td>USA (NASA)</td><td>1977</td><td>Outer planets</td><td>Flyby</td></tr>
+          <tr><td>Space Shuttle Columbia (STS-1)</td><td>USA (NASA)</td><td>1981</td><td>Earth orbit</td><td>Crewed</td></tr>
+          <tr><td>Vega 1</td><td>USSR</td><td>1984</td><td>Venus and Halley's Comet</td><td>Flyby</td></tr>
+          <tr><td>Giotto</td><td>ESA</td><td>1985</td><td>Halley's Comet</td><td>Flyby</td></tr>
+          <tr><td>Mir</td><td>USSR</td><td>1986</td><td>Earth orbit</td><td>Space station</td></tr>
+          <tr><td>Magellan</td><td>USA (NASA)</td><td>1989</td><td>Venus</td><td>Orbiter</td></tr>
+          <tr><td>Galileo</td><td>USA (NASA)</td><td>1989</td><td>Jupiter</td><td>Orbiter</td></tr>
+          <tr><td>Hubble Space Telescope</td><td>NASA / ESA</td><td>1990</td><td>Earth orbit</td><td>Space telescope</td></tr>
+          <tr><td>Ulysses</td><td>NASA / ESA</td><td>1990</td><td>Sun</td><td>Probe</td></tr>
+          <tr><td>Mars Pathfinder</td><td>USA (NASA)</td><td>1996</td><td>Mars</td><td>Lander and rover</td></tr>
+          <tr><td>Cassini–Huygens</td><td>NASA / ESA / ASI</td><td>1997</td><td>Saturn</td><td>Orbiter and lander</td></tr>
+          <tr><td>International Space Station</td><td>International</td><td>1998</td><td>Earth orbit</td><td>Space station</td></tr>
+          <tr><td>Mars Odyssey</td><td>USA (NASA)</td><td>2001</td><td>Mars</td><td>Orbiter</td></tr>
+          <tr><td>Mars Express</td><td>ESA</td><td>2003</td><td>Mars</td><td>Orbiter</td></tr>
+          <tr><td>Hayabusa</td><td>Japan (JAXA)</td><td>2003</td><td>Asteroid Itokawa</td><td>Sample return</td></tr>
+          <tr><td>Spirit</td><td>USA (NASA)</td><td>2003</td><td>Mars</td><td>Rover</td></tr>
+          <tr><td>Opportunity</td><td>USA (NASA)</td><td>2003</td><td>Mars</td><td>Rover</td></tr>
+          <tr><td>Rosetta</td><td>ESA</td><td>2004</td><td>Comet 67P</td><td>Orbiter and lander</td></tr>
+          <tr><td>MESSENGER</td><td>USA (NASA)</td><td>2004</td><td>Mercury</td><td>Orbiter</td></tr>
+          <tr><td>New Horizons</td><td>USA (NASA)</td><td>2006</td><td>Pluto</td><td>Flyby</td></tr>
+          <tr><td>Chandrayaan-1</td><td>India (ISRO)</td><td>2008</td><td>Moon</td><td>Orbiter</td></tr>
+          <tr><td>Kepler</td><td>USA (NASA)</td><td>2009</td><td>Heliocentric orbit</td><td>Space telescope</td></tr>
+          <tr><td>Juno</td><td>USA (NASA)</td><td>2011</td><td>Jupiter</td><td>Orbiter</td></tr>
+          <tr><td>Curiosity</td><td>USA (NASA)</td><td>2011</td><td>Mars</td><td>Rover</td></tr>
+          <tr><td>Chang'e 3</td><td>China (CNSA)</td><td>2013</td><td>Moon</td><td>Lander and rover</td></tr>
+          <tr><td>Mangalyaan (Mars Orbiter Mission)</td><td>India (ISRO)</td><td>2013</td><td>Mars</td><td>Orbiter</td></tr>
+          <tr><td>Gaia</td><td>ESA</td><td>2013</td><td>Sun–Earth L2</td><td>Space telescope</td></tr>
+          <tr><td>Hayabusa2</td><td>Japan (JAXA)</td><td>2014</td><td>Asteroid Ryugu</td><td>Sample return</td></tr>
+          <tr><td>OSIRIS-REx</td><td>USA (NASA)</td><td>2016</td><td>Asteroid Bennu</td><td>Sample return</td></tr>
+          <tr><td>Parker Solar Probe</td><td>USA (NASA)</td><td>2018</td><td>Sun</td><td>Probe</td></tr>
+          <tr><td>BepiColombo</td><td>ESA / JAXA</td><td>2018</td><td>Mercury</td><td>Orbiter</td></tr>
+          <tr><td>Chang'e 4</td><td>China (CNSA)</td><td>2018</td><td>Moon (far side)</td><td>Lander and rover</td></tr>
+          <tr><td>Solar Orbiter</td><td>ESA / NASA</td><td>2020</td><td>Sun</td><td>Probe</td></tr>
+          <tr><td>Hope</td><td>UAE</td><td>2020</td><td>Mars</td><td>Orbiter</td></tr>
+          <tr><td>Tianwen-1</td><td>China (CNSA)</td><td>2020</td><td>Mars</td><td>Orbiter, lander and rover</td></tr>
+          <tr><td>Perseverance</td><td>USA (NASA)</td><td>2020</td><td>Mars</td><td>Rover</td></tr>
+          <tr><td>James Webb Space Telescope</td><td>NASA / ESA / CSA</td><td>2021</td><td>Sun–Earth L2</td><td>Space telescope</td></tr>
+          <tr><td>DART</td><td>USA (NASA)</td><td>2021</td><td>Asteroid Dimorphos</td><td>Impactor</td></tr>
+          <tr><td>Artemis I</td><td>USA (NASA)</td><td>2022</td><td>Moon</td><td>Uncrewed orbital test</td></tr>
+          <tr><td>Juice</td><td>ESA</td><td>2023</td><td>Jupiter</td><td>Orbiter</td></tr>
+          <tr><td>Chandrayaan-3</td><td>India (ISRO)</td><td>2023</td><td>Moon</td><td>Lander and rover</td></tr>
+          <tr><td>SLIM</td><td>Japan (JAXA)</td><td>2023</td><td>Moon</td><td>Lander</td></tr>
+          <tr><td>Euclid</td><td>ESA</td><td>2023</td><td>Sun–Earth L2</td><td>Space telescope</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="bg-black border-top border-secondary mt-5 py-3">
+    <div class="container text-center">
+      <p class="mb-1 fw-bold"><i class="bi bi-rocket-takeoff-fill text-info"></i> Orbitly</p>
+      <p class="small text-secondary mb-0">&copy; 2026 Orbitly</p>
+    </div>
+  </footer>
+
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

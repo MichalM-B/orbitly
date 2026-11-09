@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orbitly – Observing</title>
+
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="./icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
+
+<!-- NAVBAR with logo -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-rocket-takeoff-fill text-info"></i> Orbitly
+        </a>
+
+        <!-- Hamburger button (shows on phones) -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="solar-system.html"><i class="bi bi-globe-europe-africa"></i> Solar System</a></li>
+                <li class="nav-item"><a class="nav-link" href="missions.html"><i class="bi bi-table"></i> Missions</a></li>
+                <li class="nav-item"><a class="nav-link active" href="observing.html"><i class="bi bi-binoculars"></i> Observing</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images"></i> Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<nav class="container mt-3" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html" class="text-info"><i class="bi bi-house"></i> Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Observing</li>
+    </ol>
+</nav>
+
+<main class="container my-4 flex-grow-1">
+    <h1 class="mb-3">Observing the Night Sky</h1>
+    <p class="lead">You don't need a big telescope to start. Here is how to begin.</p>
+
+    <!-- TABS -->
+    <ul class="nav nav-tabs" id="observingTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="see-tab" data-bs-toggle="tab" data-bs-target="#see"
+                    type="button" role="tab" aria-controls="see" aria-selected="true">
+                <i class="bi bi-eye"></i> What to see
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="gear-tab" data-bs-toggle="tab" data-bs-target="#gear"
+                    type="button" role="tab" aria-controls="gear" aria-selected="false">
+                <i class="bi bi-binoculars"></i> Equipment
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tips-tab" data-bs-toggle="tab" data-bs-target="#tips"
+                    type="button" role="tab" aria-controls="tips" aria-selected="false">
+                <i class="bi bi-lightbulb"></i> Tips
+            </button>
+        </li>
+    </ul>
+
+    <div class="tab-content border border-top-0 border-secondary p-4 mb-5" id="observingTabsContent">
+
+        <div class="tab-pane fade show active" id="see" role="tabpanel" aria-labelledby="see-tab" tabindex="0">
+            <h2 class="h4">Easy targets with the naked eye</h2>
+            <ul>
+                <li><strong>The Moon:</strong> craters and dark plains are visible even through binoculars.</li>
+                <li><strong>Planets:</strong> Venus, Mars, Jupiter and Saturn look like bright "stars" that don't twinkle much.</li>
+                <li><strong>The Milky Way:</strong> a faint band of light, visible only under a really dark sky.</li>
+                <li><strong>Meteor showers:</strong> the Perseids (around 12 August) and the Geminids (mid-December) are among the best.</li>
+            </ul>
+        </div>
+
+        <div class="tab-pane fade" id="gear" role="tabpanel" aria-labelledby="gear-tab" tabindex="0">
+            <h2 class="h4">What you need</h2>
+            <ul>
+                <li><strong>Your eyes:</strong> free, and surprisingly good once they adapt to the dark.</li>
+                <li><strong>Binoculars:</strong> a pair like 10x50 shows the Moon's craters and Jupiter's four biggest moons.</li>
+                <li><strong>A small telescope:</strong> great for Saturn's rings, but only worth buying after you know the sky.</li>
+                <li><strong>A red flashlight:</strong> red light doesn't ruin your night vision.</li>
+                <li><strong>A star map or app:</strong> helps you find what you are looking at.</li>
+            </ul>
+        </div>
+
+        <div class="tab-pane fade" id="tips" role="tabpanel" aria-labelledby="tips-tab" tabindex="0">
+            <h2 class="h4">Tips for beginners</h2>
+            <ol>
+                <li>Get away from city lights if you can.</li>
+                <li>Give your eyes 20 to 30 minutes to adapt to the dark, and avoid looking at your phone.</li>
+                <li>Check the cloud forecast before going out.</li>
+                <li>Dress warmer than you think you need to. Standing still at night gets cold fast.</li>
+            </ol>
+            <!-- This button opens the modal -->
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#lightModal">
+                <i class="bi bi-lightbulb-off"></i> Why does light pollution matter?
+            </button>
+        </div>
+
+    </div>
+
+    <!-- BUTTON AND LINK STYLES -->
+    <h2 class="h4 mb-3">Keep exploring</h2>
+    <div class="d-flex flex-wrap gap-2 mb-3">
+        <a class="btn btn-primary" href="solar-system.html"><i class="bi bi-globe-europe-africa"></i> Solar System</a>
+        <a class="btn btn-success" href="missions.html"><i class="bi bi-rocket-takeoff"></i> Missions</a>
+        <a class="btn btn-outline-info" href="gallery.html"><i class="bi bi-images"></i> Gallery</a>
+        <a class="btn btn-outline-light" href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+        <button type="button" class="btn btn-danger btn-sm"><i class="bi bi-stars"></i> Small button</button>
+        <button type="button" class="btn btn-secondary btn-lg"><i class="bi bi-moon-stars"></i> Large button</button>
+    </div>
+    <p>
+        Or read more on the
+        <a href="https://www.nasa.gov" class="link-info" target="_blank" rel="noopener">NASA website <i class="bi bi-box-arrow-up-right"></i></a>
+        or on <a href="https://www.esa.int" class="link-warning" target="_blank" rel="noopener">ESA's website <i class="bi bi-box-arrow-up-right"></i></a>.
+    </p>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="lightModal" tabindex="-1" aria-labelledby="lightModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header border-secondary">
+                    <h2 class="modal-title h5" id="lightModalLabel">Light pollution</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Light pollution is artificial light that shines up into the sky. It washes out faint objects like the Milky Way and most stars.</p>
+                    <p>In a big city you may see only a few hundred stars. Under a dark rural sky you can see thousands.</p>
+                    <p class="mb-0">It also affects animals, for example birds and insects that use natural light to navigate.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-black border-top border-secondary mt-5 py-3">
+    <div class="container text-center">
+        <p class="mb-1 fw-bold"><i class="bi bi-rocket-takeoff-fill text-info"></i> Orbitly</p>
+        <p class="small text-secondary mb-0">&copy; 2026 Orbitly</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS bundle (needed for navbar toggle, carousel, modal, tabs) -->
+<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

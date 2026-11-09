@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orbitly – Gallery</title>
+
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="./icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
+
+<!-- NAVBAR with logo -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-rocket-takeoff-fill text-info"></i> Orbitly
+        </a>
+
+        <!-- Hamburger button (shows on phones) -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="solar-system.html"><i class="bi bi-globe-europe-africa"></i> Solar System</a></li>
+                <li class="nav-item"><a class="nav-link" href="missions.html"><i class="bi bi-table"></i> Missions</a></li>
+                <li class="nav-item"><a class="nav-link" href="observing.html"><i class="bi bi-binoculars"></i> Observing</a></li>
+                <li class="nav-item"><a class="nav-link active" href="gallery.html"><i class="bi bi-images"></i> Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- BREADCRUMB: Home is now a link -->
+<nav class="container mt-3" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html" class="text-info"><i class="bi bi-house"></i> Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+    </ol>
+</nav>
+
+<main class="container my-4 flex-grow-1">
+    <h1 class="mb-3">Gallery</h1>
+    <p class="lead">A few of my favourite images from space.</p>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+            <figure class="figure">
+                <img src="./photos/space1.jpg" class="figure-img img-fluid rounded" alt="Galaxy">
+                <figcaption class="figure-caption text-light">A spiral galaxy.</figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="./photos/space2.jpg" class="figure-img img-fluid rounded" alt="Planet">
+                <figcaption class="figure-caption text-light">A solar system.</figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="./photos/space3.jpg" class="figure-img img-fluid rounded" alt="Rocket launch">
+                <figcaption class="figure-caption text-light">A rocket launch.</figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="./photos/space4.jpg" class="figure-img img-fluid rounded" alt="Black hole">
+                <figcaption class="figure-caption text-light">A black hole.</figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="./photos/space5.jpg" class="figure-img img-fluid rounded" alt="Galaxy cluster">
+                <figcaption class="figure-caption text-light">A cluster of galaxies.</figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="./photos/space6.jpg" class="figure-img img-fluid rounded" alt="Jupiter's eye">
+                <figcaption class="figure-caption text-light">Jupiter and its giant eye.</figcaption>
+            </figure>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-black border-top border-secondary mt-5 py-3">
+    <div class="container text-center">
+        <p class="mb-1 fw-bold"><i class="bi bi-rocket-takeoff-fill text-info"></i> Orbitly</p>
+        <p class="small text-secondary mb-0">&copy; 2026 Orbitly</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS bundle (needed for navbar toggle, carousel, modal, tabs) -->
+<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
